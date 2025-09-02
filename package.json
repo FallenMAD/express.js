@@ -1,0 +1,24 @@
+{
+  "name": "improved-development-workflow-and-debugging",
+  "version": "1.0.0",
+  "description": "Complete the Node.js guide",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FallenMAD/improved-development-workflow-and-debugging.git"
+  },
+  "author": "Roman Kvas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FallenMAD/improved-development-workflow-and-debugging/issues"
+  },
+  "homepage": "https://github.com/FallenMAD/improved-development-workflow-and-debugging#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
