@@ -1,9 +1,8 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false}));
 
 app.use('/add-products', (req, res, next) => {
   res.send(`
@@ -17,7 +16,7 @@ app.use('/add-products', (req, res, next) => {
 
 app.use('/product', (req, res, next) => {
   console.log(req)
-  console.log(req.body);
+  console.log(req.body.title);
   res.redirect('/')
 })
 
