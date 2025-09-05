@@ -1,15 +1,12 @@
+import path from 'path';
 import express from 'express';
+
+import { __dirname } from '../utils/dirnameHelper.js';
 
 const router = express.Router();
 
 router.get('/add-product', (req, res, next) => {
-  res.send(`
-    <h1>Add Products Page</h1>
-    <form action="/admin/add-product" method="POST"> 
-      <input type="text" name="title" /> 
-      <button type="submit">Send</button>
-    </form>`
-  );
+  res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
 })
 
 router.post('/add-product', (req, res, next) => {
