@@ -1,12 +1,12 @@
 import path from 'path';
 import express from 'express';
 
-import { __dirname } from '../utils/dirnameHelper.js';
+import { rootDir } from '../utils/dirnameHelper.js';
 
 const router = express.Router();
 
 router.get('/add-product', (req, res, next) => {
-  res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
+  res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
 })
 
 router.post('/add-product', (req, res, next) => {
