@@ -1,12 +1,12 @@
 import path from 'path';
 import express from 'express';
 
-import { __dirname } from '../utils/dirnameHelper.js';
+import { rootDir } from '../utils/dirnameHelper.js';
 
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-  res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
+  res.sendFile(path.join(rootDir, 'views', 'shop.html'));
 });
 
 export default router;
