@@ -1,4 +1,3 @@
-import { dirname } from 'path';
+import path from "path";
 
-export const rootDir = dirname(process.argv[1]);
-console.log(rootDir)
+export const rootDir = path.dirname(import.meta.dirname)
