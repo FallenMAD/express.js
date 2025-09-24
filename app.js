@@ -1,6 +1,5 @@
 import path from 'path';
 import express from 'express';
-import { engine } from 'express-handlebars';
 
 import { rootDir } from './utils/dirnameHelper.js';
  
@@ -9,13 +8,8 @@ import shopRoutes from './routes/shop.js';
 
 const app = express();
 
-app.engine('handlebars', engine({
-  layoutsDir: `${rootDir}/views/layouts/`,
-  defaultLayout: 'main-layout',
-  extname: '.handlebars'
-}));
-app.set('view engine', 'handlebars');
-app.set('views', `${rootDir}/views`);
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(rootDir, 'public')));
