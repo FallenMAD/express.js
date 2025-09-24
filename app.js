@@ -11,7 +11,7 @@ const app = express();
 
 app.engine('handlebars', engine({
   layoutsDir: `${rootDir}/views/layouts/`,
-  defaultLayout: false,
+  defaultLayout: 'main-layout',
   extname: '.handlebars'
 }));
 app.set('view engine', 'handlebars');
